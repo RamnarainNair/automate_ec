@@ -1,4 +1,5 @@
 import os
+import schedule
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -245,9 +246,8 @@ def job():
         )
         
         
-# schedule.every().day.at('21:40').do(job)
+schedule.every().day.at('22:15').do(job)
 
 while True:
-    # schedule.run_pending()
-    print("muie")				
+    schedule.run_pending()				
     time.sleep(1)
